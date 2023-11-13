@@ -1,0 +1,72 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: #1da1f2; /* Latar belakang biru seperti Twitter */
+min-height: 100vh;
+}
+
+.section {
+padding: 1rem 1.5rem;
+max-width: 750px;
+margin: auto;
+}
+
+.title {
+font-weight: 800;
+font-size: 5rem;
+color: #fff; /* Warna putih untuk kontras yang baik */
+}
+
+.subtitle {
+font-size: 2rem;
+color: #333; /* Warna abu-abu tua untuk kontras yang baik */
+}
+
+.is-sparta {
+color: #1da1f2 !important; /* Warna kuning muda untuk kontras */
+}
+
+.button.is-sparta {
+background-color: #1da1f2; /* Warna biru muda untuk kontras */
+border-color: transparent;
+color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+background-color: transparent;
+border-color: #1da1f2; /* Warna biru muda untuk kontras */
+color: #1da1f2 !important;
+}
+
+.help {
+color: #666; /* Warna abu-abu muda untuk kontras */
+}
+
+/* class css baru */
+.modal-content {
+width: 600px;
+max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+display: none;
+}
+
+.image img {
+object-fit: cover;
+width: 40px;
+height: 40px;
+
+}
+
+.logo-text {
+font-family: 'Vina Sans', sans-serif;
+font-size: xx-large;
+font-weight: bold; /* Menambah ketebalan teks */
+color: #fff; /* Warna putih untuk kontras yang baik */
+letter-spacing: 1px; /* Menambah jarak antar huruf */
+padding-left: 10px;
+
+}

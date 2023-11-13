@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Log In | SWEETER</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script src="{{ url_for('static', filename='myjs.js') }}"></script>
+  <link href="{{ url_for('static', filename='mystyle.css') }}" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" Ftype="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Segoe+UI">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Sweeter - the sweetest site" />
+  <meta property="og:description" content="mini project for Web Plus" />
+  <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+
+<body>
+  <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="{{ url_for('static', filename='logo.png') }}" />
+        <strong class="is-sparta logo-text">SWEETER</strong>
+      </a>
+    </div>
+  </nav>
+  <section class="hero is-white">
+    <div class="hero-body has-text-centered" style="padding-bottom: 1rem; margin: auto">
+      <h1 class="title is-sparta">SWEETER</h1>
+      <h3 class="subtitle is-sparta">The sweetest site</h3>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="box" style="max-width: 480px; margin: auto">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <div class="field has-addons">
+                <div class="control has-icons-left" style="width: 100%">
+                  <input id="input-username" class="input" type="text" placeholder="id" />
+                  <span class="icon is-small is-left"><i class="fa fa-user"></i></span>
+                </div>
+                <div id="btn-check-dup" class="control is-hidden">
+                  <button class="button is-sparta" onclick="check_dup()">
+                    Cek ID anda
+                  </button>
+                </div>
+              </div>
+              <p id="help-id" class="help is-hidden">
+                Untuk ID anda, silakan masukkan 2-10 karakter bahasa Inggris, angka, atau
+                karakter khusus berikut (._-)
+              </p>
+              <p id="help-id-login" class="help is-danger"></p>
+
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input id="input-password" class="input" type="password" placeholder="password" />
+                  <span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
+                </div>
+                <p id="help-password" class="help is-hidden">
+                  Untuk kata sandi anda, silakan masukkan 8-20 karakter bahasa Inggris,
+                  angka, atau karakter khusus berikut (!@#$%^&*)
+                </p>
+              </div>
+            </div>
+            <div id="div-sign-in-or-up" class="has-text-centered">
+              <nav class="level is-mobile">
+                <button class="level-item button is-sparta" onclick="sign_in()">
+                  Masuk
+                </button>
+                <button class="level-item button is-dark" onclick="clearInputs()">
+                  Bersihkan
+                </button>
+
+              </nav>
+              <hr />
+              <h4 class="mb-3">Jika anda belum mendaftar</h4>
+              <nav class="level is-mobile">
+                <button class="level-item button is-sparta is-outlined" onclick="toggle_sign_up()">
+                  Mendaftar
+                </button>
+              </nav>
+            </div>
+
+            <div id="sign-up-box" class="is-hidden">
+              <div class="mb-5">
+                <div class="field">
+                  <div class="control has-icons-left" style="width: 100%">
+                    <input id="input-password2" class="input" type="password" placeholder="Konfirmasi password anda" />
+                    <span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
+                  </div>
+                  <p id="help-password2" class="help is">
+                    Silakan masukkan kata sandi anda lagi
+                  </p>
+                </div>
+              </div>
+              <nav class="level is-mobile">
+                <button class="level-item button is-sparta" onclick="sign_up()">
+                  Mendaftar
+                </button>
+                <button class="level-item button is-sparta is-outlined" onclick="toggle_sign_up()">
+                  Batal
+                </button>
+                <button class="level-item button is-dark" onclick="clearInputs()">
+                  Bersihkan
+                </button>
+
+              </nav>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
